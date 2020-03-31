@@ -35,81 +35,81 @@
   </header>
 
   <main class="main">
-    <form class="main-form" action="https://echo.htmlacademy.ru" method="POST">
+    <section class="main-form__head-section">
+      <h1 class="main-form__heading">Подбор программы</h1>
+      <p class="main-form__text">
+        Заполните анкету и мы подберем
+        программу питания для вашего кота
+      </p>
 
-      <section class="main-form__head-section">
-        <h1 class="main-form__heading">Подбор программы</h1>
-        <p class="main-form__text">
-          Заполните анкету и мы подберем
-          программу питания для вашего кота
-        </p>
-      </section>
+      <form class="main-form" action="https://echo.htmlacademy.ru" method="POST">
 
-      <fieldset class="cat-bio">
-        <label class="cat-bio__name">Имя:*
-          <input type="text" name="name" placeholder="Барсик">
-        </label> <br>
+        <fieldset class="cat-bio">
+          <label class="cat-bio__name">Имя:*
+            <input type="text" name="name" placeholder="Барсик">
+          </label>
 
-        <label class="cat-bio__weight">Вес (кг):*
-          <input type="number" name="weight" placeholder="7">
-        </label> <br>
+          <label class="cat-bio__weight">Вес (кг):*
+            <input type="number" name="weight" placeholder="7">
+          </label>
 
-        <label class="cat-bio__age">Возраст (лет):
-          <input type="number" name="age" placeholder="7">
-        </label> <br>
-      </fieldset>
+          <label class="cat-bio__age">Возраст (лет):
+            <input type="number" name="age" placeholder="7">
+          </label>
+        </fieldset>
 
-      <fieldset class="cat-bio">
-        <label class="cat-bio__slim">
-          <input type="radio" name="diet" value="slim" checked>Похудение
-        </label> <br>
-        <label class="cat-bio__mass">
-          <input type="radio" name="diet" value="mass">Набор массы
-        </label> <br>
-        <label class="cat-bio__advice">
-          <input type="radio" name="diet" value="advice">Не знаю (Нужен ваш совет)
-        </label>
-      </fieldset>
+        <fieldset class="cat-bio">
+          <label class="cat-bio__slim">
+            <input type="radio" name="diet" value="slim" checked>Похудение
+          </label>
+          <label class="cat-bio__mass">
+            <input type="radio" name="diet" value="mass">Набор массы
+          </label>
+          <label class="cat-bio__advice">
+            <input type="radio" name="diet" value="advice">Не знаю (Нужен ваш совет)
+          </label>
+        </fieldset>
 
-      <fieldset class="cat-owner">
-        <legend>Контактные данные
-          (владельца кота)</legend>
+        <fieldset class="cat-owner">
+          <legend>Контактные данные
+            (владельца кота)</legend>
 
-        <label class="cat-owner__email">E-mail:*
-          <input type="email" name="email" placeholder="kuklachev@gmail.com">
-        </label> <br>
-        <label class="cat-owner__number">Телефон:*
-          <input type="text" name="tel" placeholder="8 (960) 900-60-90">
-        </label>
-      </fieldset>
+          <label class="cat-owner__email">E-mail:*
+            <input type="email" name="email" placeholder="kuklachev@gmail.com">
+          </label>
+          <label class="cat-owner__number">Телефон:*
+            <input type="text" name="tel" placeholder="8 (960) 900-60-90">
+          </label>
+        </fieldset>
 
-      <fieldset>
-        <legend>Комментарий</legend>
+        <fieldset>
+          <legend>Комментарий</legend>
 
-        <textarea name="comment" cols="32" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-      </fieldset>
+          <textarea name="comment" cols="32" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
 
-      <fieldset class="additionaly">
-        <legend>Дополнительно</legend>
+        <fieldset class="additionaly">
+          <legend>Дополнительно</legend>
 
-        <label class="additionaly__sugar">
-          <input type="checkbox" name="sugar" checked>Сахарозаменитель
-        </label> <br>
-        <label class="additionaly__water">
-          <input type="checkbox" name="water">Питьевая вода
-        </label> <br>
-        <label class="additionaly__milk">
-          <input type="checkbox" name="milk">Молоко
-        </label> <br>
-        <label class="additionaly__sugar__vitamins">
-          <input type="checkbox" name="vitamins">Витамины
-        </label>
-      </fieldset>
+          <label class="additionaly__sugar">
+            <input type="checkbox" name="sugar" checked>Сахарозаменитель
+          </label>
+          <label class="additionaly__water">
+            <input type="checkbox" name="water">Питьевая вода
+          </label>
+          <label class="additionaly__milk">
+            <input type="checkbox" name="milk">Молоко
+          </label>
+          <label class="additionaly__sugar__vitamins">
+            <input type="checkbox" name="vitamins">Витамины
+          </label>
+        </fieldset>
 
-      <button class="main-form__submit-button green-button" type="submit">Отправить заявку</button> <br>
-      <sub>* — Обязательные поля</sub>
+        <button class="main-form__submit-button green-button" type="submit">Отправить заявку</button> <br>
+        <sub>* — Обязательные поля</sub>
 
-    </form>
+      </form>
+    </section>
   </main>
 
   <footer class="footer">
@@ -129,7 +129,7 @@
 
     <article class="map">
       <h2 class="visually-hidden">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</h2>
-      <img width="320" height="368" src="https://via.placeholder.com/150x150" alt="">
+      <img width="320" height="368" src="https://via.placeholder.com/150x150" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
     </article>
 
     <div class="footer__logo-wrapper">
