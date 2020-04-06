@@ -1,0 +1,41 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__wrapper {
+  padding: 20px;
+  padding-top: 11px;
+  padding-bottom: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-header__toggle {
+  padding: 0;
+
+  width: 24px;
+  height: 18px;
+  border: none;
+
+  font-size: 0;
+
+  background-color: #ffffff;
+  background-image: url("/img/icon-mobile-menu.svg");
+}
