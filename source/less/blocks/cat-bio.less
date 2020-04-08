@@ -1,0 +1,55 @@
+.cat-bio {
+  padding-bottom: 22px;
+
+  color: #222222;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-bio__name,
+.cat-bio__weight,
+.cat-bio__age,
+.cat-bio__slim,
+.cat-bio__mass,
+.cat-bio__advice {
+  margin-top: 14px;
+
+  display: flex;
+  align-items: center;
+}
+
+.cat-bio__slim {
+  margin-top: 24px;
+}
+
+.cat-bio__input-tfield {
+  margin-left: 15px;
+  padding-left: 16px;
+  padding-top: 5px;
+
+  height: 45px;
+  border: 1px solid fadeout(#cdcdcd, 50%);
+
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+
+  &::placeholder {
+    color: #444444;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.cat-bio__input-radio {
+  margin: 0;
+  margin-right: 16px;
+
+  width: 30px;
+  height: 30px;
+}
