@@ -2,3 +2,52 @@
   display: flex;
   flex-direction: column;
 }
+
+.main__footer {
+  padding: 20px;
+}
+
+.main__footer--gift {
+  padding-top: 40px;
+  padding-bottom: 35px;
+
+  min-height: 364px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.main__footer-wrapper {
+  background-color: #68b738;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    content: url("../img/icon-gift.svg");
+    margin: 65px 0;
+
+    width: 55px;
+    height: 60px;
+  }
+}
+
+.main__footer-text {
+  margin: 0;
+  padding: 0 61px 0 60px;
+
+  max-width: 280px;
+
+  text-align: center;
+
+  color: #ffffff;
+  font-family: sans-serif;
+  font-style: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
