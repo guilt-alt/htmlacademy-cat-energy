@@ -51,3 +51,19 @@
   font-weight: 400;
   line-height: 20px;
 }
+
+@media (min-width: @tablet-width) {
+  .main__header {
+    padding: 12px 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main__header {
+    padding: 0;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

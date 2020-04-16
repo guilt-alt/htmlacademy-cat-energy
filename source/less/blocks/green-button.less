@@ -1,7 +1,7 @@
 .green-button {
   padding: 0;
 
-  min-width: calc(100% - 40px);
+  min-width: 280px;
   height: 40px;
 
   color: #ffffff;
@@ -24,5 +24,17 @@
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .green-button {
+    min-width: 249px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .green-button {
+    min-width: 169px;
   }
 }

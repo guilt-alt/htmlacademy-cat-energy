@@ -19,3 +19,29 @@
   line-height: 40px;
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .footer__logo-wrapper {
+    padding: 0;
+  }
+
+  .footer__logo {
+    min-height: 40px;
+  }
+
+  .footer__wrapper {
+    padding: 58px 30px;
+
+    max-height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer__wrapper {
+    padding: 60px 110px 56px;
+  }
+}

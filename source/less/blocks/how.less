@@ -19,12 +19,15 @@
 }
 
 .how__item {
+  position: relative;
   margin-top: 25px;
 
   color: #444444;
   font-family: sans-serif;
 
   display: flex;
+
+  z-index: 1;
 
   &::before {
     margin-right: 20px;
@@ -53,5 +56,123 @@
 
   &:last-child::before {
     content: url("../img/advantage-clock@1x.png");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .how {
+    position: relative;
+    padding: 28px 30px 55px 30px;
+
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .how__title {
+    margin-bottom: 66px;
+
+    font-size: 60px;
+    line-height: 76px;
+  }
+
+  .how__list {
+    min-width: 629px;
+    min-height: 550px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .how__item {
+    margin: 0;
+    margin-right: 86px;
+    margin-bottom: 82px;
+
+    max-width: 236px;
+    height: 228px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    &::before {
+      margin-bottom: -16px;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+
+      color: #f2f2f2;
+      font-size: 280px;
+      line-height: 200px;
+      font-family: "Oswald", sans-serif;
+
+      z-index: -1;
+    }
+
+    &:first-child::after {
+      content: "1";
+      right: 46px;
+      max-width: 71px;
+    }
+
+    &:nth-child(2)::after {
+      content: "2";
+      right: -10px;
+      min-width: 114px;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(3)::after {
+      content: "3";
+      right: -10px;
+      min-width: 114px;
+    }
+
+    &:last-child {
+      margin-right: 80px;
+      margin-bottom: 0;
+      max-width: 246px;
+    }
+
+    &:last-child::after {
+      content: "4";
+      right: 0;
+      min-width: 114px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .how {
+    padding: 36px 110px 10px;
+    min-height: 357px;
+  }
+
+  .how__list {
+    min-height: 233px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .how__item {
+    margin-right: 0;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
