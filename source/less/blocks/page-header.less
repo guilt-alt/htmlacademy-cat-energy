@@ -15,6 +15,9 @@
 }
 
 .page-header__logo {
+  width: 191px;
+  height: 38px;
+
   &:hover {
     opacity: 0.8;
   }
@@ -39,4 +42,43 @@
 
   background-color: #ffffff;
   background-image: url("../img/icon-mobile-menu.svg");
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    padding: 24px 30px 31px 30px;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-header__wrapper {
+    padding-left: 0;
+  }
+
+  .page-header__logo {
+    width: 173px;
+    height: 58px;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    padding: 54px 110px;
+
+    min-width: 100%;
+
+    &--position {
+      position: absolute;
+    }
+  }
+
+  .page-header__logo {
+    width: 202px;
+    height: 59px;
+  }
 }
