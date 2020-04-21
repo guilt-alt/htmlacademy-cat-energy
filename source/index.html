@@ -17,8 +17,7 @@
         <picture class="page-header__logo-image">
           <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img src="img/logo-mobile.svg"
-            alt="Логотип Кэт Энерджи">
+          <img src="img/logo-mobile.svg" alt="Логотип Кэт Энерджи">
         </picture>
       </a>
 
@@ -48,7 +47,7 @@
           <p class="cat-food__text">Занялся собой? Займись котом!</p>
 
           <picture>
-            <source media="(min-width: 768px)" srcset="img/index-can-desktop@1x.png">
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
             <img class="cat-food__image" src="img/index-can-mobile@1x.png" alt="Фото нашей продукции">
           </picture>
@@ -88,59 +87,75 @@
     </section>
 
     <section class="example">
-      <h2 class="example__heading">Живой пример</h2>
-      <p class="example__text">
-        Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-        изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+      <div>
+        <h2 class="example__heading">Живой пример</h2>
+        <p class="example__text">
+          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
+          изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
 
-      <div class="example__stats">
-        <div class="example__stats-mass">5 кг
-          <p class="example__stats-text">снижение<br>
-            веса</p>
-        </div>
-        <div class="example__stats-days">60 дней
-          <p class="example__stats-text">затрачено<br>
-            времени</p>
+        <div class="example__stats">
+          <div class="example__stats-mass">5 кг
+            <p class="example__stats-text">снижение
+              веса</p>
+          </div>
+          <div class="example__stats-days">60 дней
+            <p class="example__stats-text">затрачено
+              времени</p>
+          </div>
+
+          <p class="example__stats-expenses">Затраты на питание:
+            <span>15 000 руб.</span></p>
         </div>
       </div>
 
-      <p class="example__stats-expenses">Затраты на питание: 15 000 руб.</p>
+      <div class="example__image-wrapper">
+        <picture class="example__range-slider-image example__range-slider-image--after">
+          <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+          <img class="example__range-slider-image-after" src="img/after-mobile@1x.png" alt="">
+        </picture>
+        <picture class="example__range-slider-image example__range-slider-image--before">
+          <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+          <img class="example__range-slider-image-before" src="img/before-mobile@1x.png" alt="">
+        </picture>
 
-      <picture class="example__range-slider-image">
-        <img width="320" height="232" src="img/before-mobile@1x.png" alt="">
-
-        <img width="320" height="232" src="img/after-mobile@1x.png" alt="">
-      </picture>
-
-      <div class="example__range-slider">
-        <span class="example__range-text">Было</span>
-        <div class="example__range-slider-pin"></div>
-        <span class="example__range-text">Стало</span>
+        <div class="example__range-slider-wrapper">
+          <span class="example__range-text">Было</span>
+          <div class="example__range-slider">
+            <div class="example__range-slider-pin"></div>
+          </div>
+          <span class="example__range-text">Стало</span>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="collab">
-      <p class="collab__text">
-        приглашаем<br>
-        к сотрудничеству<br>
-        дилеров!
-      </p>
-      <address class="collab__address">
-        ул. Большая<br>
-        Конюшенная, д. 19/8<br>
-        Санкт-Петербург
-      </address>
-    </div>
+    <div class="footer__map-wrapper">
+      <div class="collab collab--bg-white">
+        <p class="collab__text">
+          приглашаем<br>
+          к сотрудничеству<br>
+          дилеров!
+        </p>
+        <address class="collab__address">ул. Большая
+          Конюшенная, д. 19/8
 
-    <article class="map">
-      <h2 class="visually-hidden">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</h2>
-      <picture class="map__img">
-        <img width="320" height="360" src="img/bg-map-mobile@1x.png"
-          alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-      </picture>
-    </article>
+          Санкт-Петербург
+        </address>
+      </div>
+
+      <article class="map">
+        <h2 class="visually-hidden">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</h2>
+        <picture class="map__img">
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+          <img height="100%" width="100%" src="img/bg-map-mobile@1x.png"
+            alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </picture>
+      </article>
+    </div>
 
     <div class="footer__wrapper">
       <div class="footer__logo-wrapper">
@@ -189,7 +204,6 @@
       </div>
     </div>
   </footer>
-
 </body>
 
 </html>

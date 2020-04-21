@@ -42,49 +42,72 @@
   <main class="main-form">
     <h1 class="main-form__heading">Подбор программы</h1>
     <p class="main-form__description">
-      Заполните анкету и мы подберем
+      Заполните анкету и мы подберем<br>
       программу питания для вашего кота
     </p>
 
     <form class="form" action="https://echo.htmlacademy.ru" method="POST">
 
-      <fieldset class="cat-bio">
-        <label class="cat-bio__label">Имя:*
-          <input class="cat-bio__input-tfield text-field" type="text" name="name" placeholder="Барсик">
-        </label>
+      <div class="form__cat-bio-wrapper">
+        <fieldset class="cat-bio">
+          <label class="cat-bio__label">Имя:*
+            <input class="cat-bio__input text-field" type="text" name="name" placeholder="Барсик">
+          </label>
 
-        <label class="cat-bio__label">Вес (кг):*
-          <input class="cat-bio__input-tfield text-field" type="number" name="weight" placeholder="7">
-        </label>
+          <label class="cat-bio__label">Вес (кг):*
+            <input class="cat-bio__input text-field" type="number" name="weight" placeholder="7">
+          </label>
 
-        <label class="cat-bio__label">Возраст&nbsp;(лет):
-          <input class="cat-bio__input-tfield text-field" type="number" name="age" placeholder="7">
-        </label>
-      </fieldset>
+          <label class="cat-bio__label">Возраст&nbsp;(лет):
+            <input class="cat-bio__input text-field" type="number" name="age" placeholder="7">
+          </label>
+        </fieldset>
 
-      <fieldset class="cat-bio">
-        <label class="cat-bio__label">
-          <input class="cat-bio__input-radio radio-checkbox" type="radio" name="diet" value="slim" checked>Похудение
-        </label>
-        <label class="cat-bio__label">
-          <input class="cat-bio__input-radio radio-checkbox" type="radio" name="diet" value="mass">Набор массы
-        </label>
-        <label class="cat-bio__label">
-          <input class="cat-bio__input-radio radio-checkbox" type="radio" name="diet" value="advice">Не знаю (Нужен ваш
-          совет)
-        </label>
-      </fieldset>
+        <fieldset class="cat-bio cat-bio--border">
+          <label class="cat-bio__label cat-bio__label--radio">
+            <input class="cat-bio__radio visually-hidden" type="radio" name="diet" value="slim" checked>Похудение
+            <span class="radio-checkbox"></span>
+          </label>
+          <label class="cat-bio__label cat-bio__label--radio">
+            <input class="cat-bio__radio visually-hidden" type="radio" name="diet" value="mass">Набор массы
+            <span class="radio-checkbox"></span>
+          </label>
+          <label class="cat-bio__label cat-bio__label--radio">
+            <input class="cat-bio__radio visually-hidden" type="radio" name="diet" value="advice">Не знаю (Нужен ваш
+            совет)
+            <span class="radio-checkbox"></span>
+          </label>
+        </fieldset>
+      </div>
 
       <fieldset class="cat-owner">
         <legend class="cat-owner__title">Контактные данные
           (владельца кота)</legend>
 
-        <label class="cat-owner__email">E-mail:*
-          <input class="cat-owner__input-tfield text-field" type="email" name="email" placeholder="kuklachev@gmail.com">
-        </label>
-        <label class="cat-owner__number">Телефон:*
-          <input class="cat-owner__input-tfield text-field" type="text" name="tel" placeholder="8 (960) 900-60-90">
-        </label>
+        <div class="cat-owner__wrapper">
+          <label class="cat-owner__email">E-mail:*
+            <input class="cat-owner__input text-field" type="email" name="email" placeholder="kuklachev@gmail.com">
+
+            <svg class="cat-owner__icon" fill="#222222" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 13" xml:space="preserve">
+              <path
+                d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z" />
+            </svg>
+          </label>
+          <label class="cat-owner__number">Телефон:*
+            <input class="cat-owner__input text-field" type="text" name="tel" placeholder="8 (960) 900-60-90">
+
+            <svg class="cat-owner__icon" fill="#222222" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" xml:space="preserve">
+              <path
+                d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z" />
+              <path d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
+            c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6
+            C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4
+            C7.8,20,8.1,19.7,8.1,19.4z" />
+            </svg>
+          </label>
+        </div>
       </fieldset>
 
       <fieldset class="cat-comment">
@@ -97,47 +120,60 @@
       <fieldset class="cat-additionaly">
         <legend class="cat-additionaly__title">Дополнительно</legend>
 
-        <label class="cat-additionaly__label">
-          <input class="cat-additionaly__checkbox radio-checkbox" type="checkbox" name="sugar" checked>Сахарозаменитель
-        </label>
-        <label class="cat-additionaly__label">
-          <input class="cat-additionaly__checkbox radio-checkbox" type="checkbox" name="water">Питьевая вода
-        </label>
-        <label class="cat-additionaly__label">
-          <input class="cat-additionaly__checkbox radio-checkbox" type="checkbox" name="milk">Молоко
-        </label>
-        <label class="cat-additionaly__label">
-          <input class="cat-additionaly__checkbox radio-checkbox" type="checkbox" name="vitamins">Витамины
-        </label>
+        <div class="cat-additionaly__wrapper">
+          <label class="cat-additionaly__label">
+            <input class="cat-additionaly__checkbox visually-hidden" type="checkbox" name="sugar"
+              checked>Сахарозаменитель
+            <span class="radio-checkbox radio-checkbox--radius"></span>
+          </label>
+          <label class="cat-additionaly__label">
+            <input class="cat-additionaly__checkbox visually-hidden" type="checkbox" name="water">Питьевая вода
+            <span class="radio-checkbox radio-checkbox--radius"></span>
+          </label>
+          <label class="cat-additionaly__label">
+            <input class="cat-additionaly__checkbox visually-hidden" type="checkbox" name="milk">Молоко
+            <span class="radio-checkbox radio-checkbox--radius"></span>
+          </label>
+          <label class="cat-additionaly__label">
+            <input class="cat-additionaly__checkbox visually-hidden" type="checkbox" name="vitamins">Витамины
+            <span class="radio-checkbox radio-checkbox--radius"></span>
+          </label>
+        </div>
       </fieldset>
 
-      <button class="form__submit green-button" type="submit">Отправить заявку</button> <br>
-      <sub class="form__sub-text">* — Обязательные поля</sub>
+      <div class="form__submit-wrapper">
+        <button class="form__submit green-button" type="submit">Отправить заявку</button> <br>
+        <sub class="form__sub-text">* — Обязательные поля</sub>
+      </div>
 
     </form>
   </main>
 
   <footer class="footer">
-    <div class="collab">
-      <p class="collab__text">
-        приглашаем<br>
-        к сотрудничеству<br>
-        дилеров!
-      </p>
-      <address class="collab__address">
-        ул. Большая<br>
-        Конюшенная, д. 19/8<br>
-        Санкт-Петербург
-      </address>
-    </div>
+    <div class="footer__map-wrapper">
+      <div class="collab">
+        <p class="collab__text">
+          приглашаем<br>
+          к сотрудничеству<br>
+          дилеров!
+        </p>
+        <address class="collab__address">ул. Большая
+          Конюшенная, д. 19/8
 
-    <article class="map">
-      <h2 class="visually-hidden">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</h2>
-      <picture class="map__img">
-        <img width="320" height="360" src="img/bg-map-mobile@1x.png"
-          alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-      </picture>
-    </article>
+          Санкт-Петербург
+        </address>
+      </div>
+
+      <article class="map">
+        <h2 class="visually-hidden">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</h2>
+        <picture class="map__img">
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+          <img height="100%" width="100%" src="img/bg-map-mobile@1x.png"
+            alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </picture>
+      </article>
+    </div>
 
     <div class="footer__wrapper">
       <div class="footer__logo-wrapper">

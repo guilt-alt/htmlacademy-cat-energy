@@ -1,6 +1,17 @@
 .cat-comment {
-  padding-top: 10px;
-  padding-bottom: 15px;
+  position: relative;
+  padding: 10px 20px 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 0;
+
+    width: calc(100% - 162px);
+    height: 3px;
+    background-color: #68b738;
+  }
 }
 
 .cat-comment__title {
@@ -19,6 +30,8 @@
   min-width: 100%;
   height: 150px;
 
+  border: 1px solid #cdcdcd;
+
   resize: none;
 
   &::placeholder {
@@ -27,5 +40,64 @@
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .cat-comment {
+    margin-top: 46px;
+    padding: 56px 70px 15px;
+
+    &::before {
+      top: 22px;
+
+      width: calc(100% - 289px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 0;
+
+      width: 4%;
+      height: 3px;
+      background-color: #68b738;
+    }
+  }
+
+  .cat-comment__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .cat-comment__textarea {
+    padding: 10px 20px;
+    height: 174px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cat-comment {
+    padding: 10px 110px 15px;
+
+    &::before {
+      top: 22px;
+
+      width: calc(100% - 330px);
+    }
+
+    &::after {
+      width: 5%;
+    }
+  }
+
+  .cat-comment__textarea {
+    margin-top: 49px;
   }
 }

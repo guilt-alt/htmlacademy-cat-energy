@@ -8,6 +8,8 @@
 .map__img {
   position: relative;
 
+  max-height: 360px;
+
   &::before {
     content: "";
     position: absolute;
@@ -24,5 +26,11 @@
     display: block;
 
     z-index: 1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .map__img {
+    max-height: 400px;
   }
 }
