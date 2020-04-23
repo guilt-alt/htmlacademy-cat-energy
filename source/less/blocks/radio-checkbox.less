@@ -1,7 +1,26 @@
 .radio-checkbox {
-  margin: 0;
-  margin-right: 16px;
+  position: absolute;
+  left: 0;
 
   width: 30px;
   height: 30px;
+  border-radius: 50%;
+
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--radius {
+    border-radius: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .radio-checkbox {
+    width: 40px;
+    height: 40px;
+  }
 }

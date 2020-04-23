@@ -1,4 +1,5 @@
 .cat-bio {
+  padding: 0 20px;
   padding-bottom: 22px;
 
   color: #222222;
@@ -7,15 +8,119 @@
 
   display: flex;
   flex-direction: column;
+
+  &--border {
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .cat-bio__label {
-  margin-top: 14px;
+  position: relative;
+  margin-top: 12px;
+
+  min-height: 30px;
 
   display: flex;
   align-items: center;
 
   &:first-child {
     margin-top: 24px;
+  }
+
+  &--radio {
+    padding-left: 44px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.cat-bio__radio:hover + .radio-checkbox {
+  border-color: #bababa;
+}
+
+.cat-bio__radio:focus + .radio-checkbox {
+  border: 3px solid #68b738;
+}
+
+.cat-bio__radio:checked + .radio-checkbox {
+  &::before {
+    content: "";
+
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    background-color: #68b738;
+  }
+}
+
+.cat-bio__radio:checked:disabled + .radio-checkbox {
+  opacity: 0.5;
+  border-color: #cdcdcd;
+
+  &::before {
+    background-color: #cdcdcd;
+  }
+}
+
+.cat-bio__radio:disabled + .radio-checkbox {
+  opacity: 0.5;
+  border-color: #cdcdcd;
+}
+
+@media (min-width: @tablet-width) {
+  .cat-bio {
+    padding: 0 70px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &--border {
+      margin: 72px 70px 0;
+      padding: 1px 28px 25px;
+
+      border: 1px solid #cdcdcd;
+    }
+  }
+
+  .cat-bio__radio:checked + .radio-checkbox {
+    &::before {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .cat-bio__label {
+    margin-top: 20px;
+
+    min-height: 40px;
+
+    &--radio {
+      margin-top: 12px;
+      padding-left: 60px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cat-bio {
+    margin: 0;
+    padding: 0;
+
+    min-width: 568px;
+
+    &--border {
+      padding: 25px 28px;
+
+      min-width: 570px;
+      border: 1px solid #cdcdcd;
+    }
+  }
+
+  .cat-bio__label:first-child {
+    margin-top: 0;
   }
 }

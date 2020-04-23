@@ -1,13 +1,13 @@
 .additional {
-  padding: 30px 20px 0 20px;
+  padding: 33px 20px 0 20px;
 }
 
 .additional__heading {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 
   color: #111111;
-  font-style: 24px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 24px;
 }
@@ -33,7 +33,7 @@
 
   color: #222222;
   font-weight: 400;
-  font-style: 16px;
+  font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
 }
@@ -45,4 +45,116 @@
 
   display: flex;
   justify-content: space-between;
+}
+
+.additional__link {
+  flex-grow: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .additional {
+    padding: 9px 30px 0 30px;
+  }
+
+  .additional__heading {
+    margin-bottom: 78px;
+    padding-left: 37px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .additional__item {
+    padding: 28px 38px;
+    border: 1px solid #ededed;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .additional__item-heading {
+    font-size: 20px;
+    line-height: 20px;
+    min-width: calc(100% - 274px);
+  }
+
+  .additional__info {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    min-width: 140px;
+    justify-content: flex-end;
+  }
+
+  .additional__info span {
+    padding-left: 50px;
+  }
+
+  .additional__link {
+    margin-top: 22px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional {
+    padding: 16px 110px 8px 110px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .additional__heading {
+    margin-bottom: 80px;
+    padding: 0;
+
+    min-width: 100%;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .additional__list {
+    padding-right: 80px;
+    flex-grow: 1;
+  }
+
+  .additional__item {
+    padding: 15px 0;
+
+    border-left: none;
+    border-right: none;
+
+    align-items: center;
+  }
+
+  .additional__item-heading {
+    min-width: calc(100% - 288px - 245px - 36px);
+  }
+
+  .additional__info {
+    margin-top: 8px;
+    margin-right: 36px;
+
+    min-width: 288px;
+    justify-content: space-between;
+  }
+
+  .additional__info span {
+    min-width: 44px;
+    display: block;
+    padding-left: 0;
+    text-align-last: left;
+  }
+
+  .additional__link {
+    margin: 0;
+    min-width: 245px;
+    flex-grow: 0;
+  }
 }

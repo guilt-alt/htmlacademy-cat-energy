@@ -1,24 +1,37 @@
 .cat-owner {
-  margin-top: 25px;
+  position: relative;
+  margin-top: 30px;
+  padding: 0 20px;
   padding-bottom: 20px;
 
   color: #222222;
   font-size: 16px;
   text-transform: uppercase;
 
-  display: flex;
-  flex-direction: column;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 0;
+
+    width: calc(100% - 221px);
+    height: 3px;
+    background-color: #68b738;
+  }
 }
 
 .cat-owner__title {
   margin-bottom: 30px;
   padding: 0;
 
+  min-width: 100%;
+
   color: #111111;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
   text-transform: none;
+  white-space: pre-line;
 }
 
 .cat-owner__email,
@@ -29,4 +42,101 @@
 
 .cat-owner__number {
   margin-top: 14px;
+}
+
+.cat-owner__input {
+  padding-top: 8px;
+  padding-left: 10px;
+
+  border-right: none;
+}
+
+.cat-owner__icon {
+  padding-right: 14px;
+  width: 34px;
+  height: 45px;
+
+  border: 1px solid #cdcdcd;
+  border-left: none;
+}
+
+@media (min-width: @tablet-width) {
+  .cat-owner {
+    margin-top: 76px;
+    padding: 0 70px 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      top: 22px;
+
+      width: calc(100% - 624px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 0;
+
+      width: 4%;
+      height: 3px;
+      background-color: #68b738;
+    }
+  }
+
+  .cat-owner__title {
+    font-size: 36px;
+    line-height: 36px;
+    white-space: nowrap;
+  }
+
+  .cat-owner__wrapper {
+    padding-top: 46px;
+  }
+
+  .cat-owner__number {
+    margin-top: 20px;
+  }
+
+  .cat-owner__input {
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+
+  .cat-owner__icon {
+    height: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cat-owner {
+    margin-top: 69px;
+    padding: 0 110px 20px;
+
+    width: 1440px;
+
+    &::before {
+      top: 22px;
+
+      width: calc(100% - 663px);
+    }
+
+    &::after {
+      width: 5%;
+    }
+  }
+
+  .cat-owner__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cat-owner__email,
+  .cat-owner__number {
+    margin: 0;
+    min-width: 568px;
+  }
 }

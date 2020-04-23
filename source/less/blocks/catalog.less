@@ -1,7 +1,7 @@
 .catalog {
   position: relative;
 
-  padding: 32px 0 0 0;
+  padding: 30px 0 0 0;
 
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
@@ -34,7 +34,10 @@
   max-height: 210px;
 
   border-top: 1px solid #ededed;
-  border-bottom: 1px solid #ededed;
+
+  &:last-child {
+    border-bottom: 1px solid #ededed;
+  }
 }
 
 .catalog__wrapper {
@@ -51,6 +54,7 @@
   margin-top: 0;
 
   max-width: calc(100% - 140px);
+  border-collapse: collapse;
 }
 
 .catalog__th {
@@ -144,8 +148,6 @@
     margin-top: 40px;
     margin-bottom: 30px;
     max-width: 100%;
-
-    border-collapse: collapse;
   }
 
   .catalog__th {
@@ -175,7 +177,7 @@
 
 @media (min-width: @desktop-width) {
   .catalog {
-    padding-top: 14px;
+    padding-top: 4px;
   }
 
   .catalog__title {

@@ -1,10 +1,10 @@
 .how {
-  padding: 32px 27px 42px 20px;
+  padding: 16px 25px 42px 20px;
 }
 
 .how__title {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 
   color: #111111;
   font-size: 36px;
@@ -20,14 +20,13 @@
 
 .how__item {
   position: relative;
-  margin-top: 25px;
+  margin-top: 20px;
 
   color: #444444;
+  line-height: 18px;
   font-family: sans-serif;
 
   display: flex;
-
-  z-index: 1;
 
   &::before {
     margin-right: 20px;
@@ -62,7 +61,7 @@
 @media (min-width: @tablet-width) {
   .how {
     position: relative;
-    padding: 28px 30px 55px 30px;
+    padding: 28px 30px 50px 30px;
 
     border-bottom: 1px solid #e6e6e6;
   }
@@ -158,6 +157,12 @@
   .how {
     padding: 36px 110px 10px;
     min-height: 357px;
+
+    border: none;
+  }
+
+  .how__title {
+    margin-bottom: 65px;
   }
 
   .how__list {

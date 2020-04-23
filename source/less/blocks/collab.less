@@ -1,5 +1,5 @@
 .collab {
-  padding: 31px 25px 26px 19px;
+  padding: 28px 25px 26px 19px;
 
   min-height: 114px;
 
@@ -7,12 +7,17 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+
+  &--bg-white {
+    background-color: #ffffff;
+  }
 }
 
 .collab__text {
   margin: 0;
-  margin-right: 6%;
+
+  min-width: 50%;
 
   color: #111111;
   font-size: 16px;
@@ -21,7 +26,52 @@
 }
 
 .collab__address {
+  max-width: 138px;
+
   color: #444444;
   font-style: normal;
   font-family: sans-serif;
+}
+
+@media (min-width: @tablet-width) {
+  .collab {
+    padding: 66px 72px 54px;
+    align-items: flex-start;
+  }
+
+  .collab__text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .collab__address {
+    max-width: 200px;
+
+    text-align: right;
+    font-size: 16px;
+    line-height: 20px;
+    white-space: pre-line;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .collab {
+    position: absolute;
+    left: 150px;
+
+    padding: 60px 90px 59px 76px;
+
+    width: 570px;
+    height: 201px;
+
+    background-color: #ffffff;
+
+    align-items: center;
+
+    z-index: 1;
+  }
+
+  .collab__address {
+    text-align-last: left;
+  }
 }
