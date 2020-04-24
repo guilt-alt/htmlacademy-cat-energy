@@ -3,15 +3,24 @@
 
   max-height: 77px;
   line-height: 16px;
+}
 
+.copy__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:hover .copy__logo-image {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copy__text {
   margin: 0;
-  margin-bottom: 6px;
 
   color: #444444;
   font-family: sans-serif;
@@ -29,6 +38,7 @@
   }
 
   .copy__text {
+    margin-bottom: 6px;
     margin-right: 16px;
   }
 }

@@ -247,8 +247,9 @@
   }
 
   .example__range-slider-wrapper {
+    position: relative;
     left: 99px;
-    bottom: -564px;
+    top: 530px;
 
 
     width: 569px;
@@ -258,6 +259,8 @@
   }
 
   .example__range-text {
+    margin-top: 6px;
+    padding-bottom: 6px;
     font-size: 20px;
   }
 
@@ -285,6 +288,44 @@
 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15),
       inset 0 0 0 12px #ffffff;
+
+    &:hover {
+      cursor: grab;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 12px #ffffff;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      border-bottom: 1px solid #cacaca;
+    }
+
+    &:active::before,
+    &:active::after {
+      border-bottom: none;
+    }
+
+    &:active {
+      border: 2px solid #68b738;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 10.5px #ffffff;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: -271px;
+      bottom: 0;
+
+      width: 48px;
+      height: 2px;
+      border-bottom: 1px dotted #cacaca;
+    }
+
+    &::after {
+      left: 252px;
+    }
   }
 }
 

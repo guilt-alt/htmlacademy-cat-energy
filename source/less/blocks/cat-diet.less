@@ -99,6 +99,15 @@
     display: flex;
     align-items: center;
   }
+
+  &:hover::after {
+    content: url("../img/icon-right-arrow-verylong.svg");
+    width: 33px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
