@@ -1,7 +1,7 @@
 .cat-diet {
   position: relative;
 
-  padding: 22px 30px 22px 20px;
+  padding: 23px 30px 22px 20px;
   margin: 10px 20px;
 
   background-color: #f2f2f2;
@@ -25,7 +25,8 @@
 
   &::before {
     content: "";
-    margin-right: 20px;
+    margin-left: 2px;
+    margin-right: 19px;
 
     width: 50px;
     height: 50px;
@@ -39,8 +40,8 @@
   &::after {
     content: url("../img/icon-cat-slim.svg");
     position: absolute;
-    left: 8px;
-    top: -4px;
+    left: 10px;
+    top: -2px;
 
     width: 35px;
     height: 49px;
@@ -49,7 +50,7 @@
   &--pro::after {
     content: url("../img/icon-cat-pro.svg");
     position: absolute;
-    top: 11px;
+    top: 10px;
     left: -7px;
 
     width: 67px;
@@ -90,7 +91,7 @@
 
   &::after {
     content: url("../img/icon-right-arrow-long.svg");
-    margin-left: 14px;
+    margin-left: 12px;
 
     width: 24px;
     height: 11px;
@@ -103,10 +104,15 @@
 @media (min-width: @tablet-width) {
   .cat-diet {
     margin: 0;
+    margin-top: 18px;
     margin-bottom: 30px;
     padding: 84px 62px 62px 52px;
 
     min-height: 372px;
+
+    &:last-child {
+      margin-top: 0;
+    }
   }
 
   .cat-diet__title {
@@ -115,8 +121,8 @@
 
     &::before {
       position: absolute;
-      top: 11px;
-      left: calc(100% - 200px);
+      top: 8px;
+      left: calc(100% - 201px);
 
       margin-right: 0;
 
@@ -125,7 +131,7 @@
     }
 
     &::after {
-      top: -1px;
+      top: -4px;
       left: calc(100% - 170px);
 
       width: 140px;
@@ -133,7 +139,7 @@
     }
 
     &--pro::after {
-      top: 54px;
+      top: 52px;
       left: calc(100% - 234px);
 
       width: 268px;
@@ -143,7 +149,7 @@
 
   .cat-diet__text {
     padding: 0;
-    margin-top: 31px;
+    margin-top: 28px;
     margin-bottom: 62px;
 
     font-size: 16px;
@@ -174,14 +180,13 @@
   .cat-diet {
     margin-top: 80px;
     margin-left: 110px;
-    padding: 41px 56px 62px 52px;
+    padding: 46px 56px 62px 52px;
 
     max-width: 570px;
     max-height: 372px;
 
     &:last-child {
-      margin-left: 0;
-      margin-right: 110px;
+      margin: 80px 110px 30px 0;
     }
   }
 
@@ -191,7 +196,7 @@
       top: 0;
       left: 0;
 
-      margin-right: 64px;
+      margin-right: 62px;
 
       width: 100px;
       height: 100px;
@@ -215,7 +220,7 @@
   }
 
   .cat-diet__text {
-    margin-top: 45px;
+    margin-top: 40px;
     margin-bottom: 37px;
     min-width: 100%;
 
