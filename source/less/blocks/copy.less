@@ -3,10 +3,20 @@
 
   max-height: 77px;
   line-height: 16px;
+}
 
+.copy__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:hover .copy__logo-image {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copy__text {
@@ -18,6 +28,7 @@
 }
 
 .copy__logo-image {
+  margin-right: -6px;
   fill: #666666;
 }
 
@@ -27,12 +38,17 @@
   }
 
   .copy__text {
-    margin-right: 10px;
+    margin-bottom: 6px;
+    margin-right: 16px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .copy {
+    margin-bottom: -6px;
+  }
+
   .copy__text {
-    margin-right: 20px;
+    margin-right: 16px;
   }
 }
