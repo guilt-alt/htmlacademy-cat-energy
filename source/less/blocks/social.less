@@ -43,11 +43,6 @@
 
   display: block;
 
-  &--insta {
-    width: 16px;
-    height: 16px;
-  }
-
   &:hover {
     fill: #68b738;
   }
@@ -55,6 +50,11 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.social__link--insta {
+  width: 16px;
+  height: 16px;
 }
 
 @media (min-width: @tablet-width) {
@@ -77,11 +77,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
 
-    &--insta {
-      width: 23px;
-      height: 23px;
-    }
+  .social__link--insta {
+    width: 23px;
+    height: 23px;
   }
 
   .social__item {
