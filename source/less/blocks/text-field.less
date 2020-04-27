@@ -10,6 +10,11 @@
   display: flex;
   align-items: center;
 
+  &:first-child {
+    padding-top: 8px;
+    padding-left: 12px;
+  }
+
   &::placeholder {
     color: #444444;
     font-family: "Oswald", sans-serif;
@@ -21,9 +26,12 @@
 
 @media (min-width: @tablet-width) {
   .text-field {
-    padding-top: 12px;
-    padding-left: 22px;
     height: 52px;
+
+    &:first-child {
+      margin-left: 18px;
+      padding-left: 17px;
+    }
 
     &::placeholder {
       font-size: 20px;

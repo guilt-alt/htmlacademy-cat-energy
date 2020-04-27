@@ -64,8 +64,8 @@
 
 @media (min-width: @tablet-width) {
   .cat-owner {
-    margin-top: 76px;
-    padding: 0 70px 20px;
+    margin-top: 74px;
+    padding: 0 69px 20px;
 
     font-size: 20px;
     line-height: 20px;
@@ -95,15 +95,15 @@
   }
 
   .cat-owner__wrapper {
-    padding-top: 46px;
+    padding-top: 44px;
   }
 
   .cat-owner__number {
     margin-top: 20px;
   }
 
-  .cat-owner__input {
-    padding-top: 10px;
+  .cat-owner__input.text-field {
+    margin-left: 17px;
     padding-left: 20px;
   }
 
@@ -114,10 +114,8 @@
 
 @media (min-width: @desktop-width) {
   .cat-owner {
-    margin-top: 69px;
+    margin-top: 68px;
     padding: 0 110px 20px;
-
-    width: 1440px;
 
     &::before {
       top: 22px;
@@ -139,6 +137,18 @@
   .cat-owner__email,
   .cat-owner__number {
     margin: 0;
+  }
+
+  .cat-owner__email {
     min-width: 568px;
+  }
+
+  .cat-owner__number {
+    min-width: 572px;
+  }
+
+  .cat-owner__input.text-field {
+    margin-left: 18px;
+    padding-left: 20px;
   }
 }
