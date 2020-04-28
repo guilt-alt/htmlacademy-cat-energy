@@ -4,11 +4,20 @@
   padding-top: 5px;
 
   height: 45px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid fadeout(#cdcdcd, 50%);
+
+  color: #444444;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
 
   flex-grow: 1;
   display: flex;
   align-items: center;
+
+  outline: none;
+  appearance: textfield;
 
   &:first-child {
     padding-top: 8px;
@@ -16,12 +25,31 @@
   }
 
   &::placeholder {
-    color: #444444;
-    font-family: "Oswald", sans-serif;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
   }
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+  }
+}
+
+.text-field:focus + .cat-owner__icon {
+  fill: #68b738;
+}
+
+.text-field--valid {
+  border: 2px solid #ff8282;
+}
+
+.text-field--valid + .cat-owner__icon {
+  fill: #ff8282;
 }
 
 @media (min-width: @tablet-width) {
