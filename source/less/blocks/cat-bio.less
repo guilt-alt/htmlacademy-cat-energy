@@ -11,8 +11,8 @@
 }
 
 .cat-bio--border {
-  border-top: 1px solid #cdcdcd;
-  border-bottom: 1px solid #cdcdcd;
+  border-top: 1px solid fadeout(#cdcdcd, 50%);
+  border-bottom: 1px solid fadeout(#cdcdcd, 50%);
 }
 
 .cat-bio__label {
@@ -27,10 +27,6 @@
   &:first-child {
     margin-top: 24px;
   }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 .cat-bio__label--radio {
@@ -40,6 +36,10 @@
   &:first-child {
     margin-top: 20px;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .cat-bio__radio:hover + .radio-checkbox {
@@ -47,7 +47,7 @@
 }
 
 .cat-bio__radio:focus + .radio-checkbox {
-  border: 3px solid #68b738;
+  border: 2px solid #68b738;
 }
 
 .cat-bio__radio:checked + .radio-checkbox {
@@ -88,7 +88,7 @@
     margin: 72px 70px 0;
     padding: 1px 28px 25px;
 
-    border: 1px solid #cdcdcd;
+    border: 1px solid fadeout(#cdcdcd, 50%);
   }
 
   .cat-bio__radio:checked + .radio-checkbox {
@@ -130,7 +130,6 @@
     padding: 25px 28px;
 
     min-width: 570px;
-    border: 1px solid #cdcdcd;
   }
 
   .cat-bio__label:first-child {
