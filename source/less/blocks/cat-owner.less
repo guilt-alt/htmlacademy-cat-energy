@@ -47,13 +47,19 @@
 
 .cat-owner__input {
   margin-left: 10px;
-  padding-top: 9px;
   padding-left: 14px;
+}
+
+.cat-owner__input.text-field {
+  padding-top: 4px;
 }
 
 .cat-owner__icon {
   position: absolute;
+  top: 52%;
   right: 12px;
+
+  transform: translateY(-50%);
 }
 
 @media (min-width: @tablet-width) {
@@ -144,5 +150,9 @@
   .cat-owner__input.text-field {
     margin-left: 18px;
     padding-left: 20px;
+  }
+
+  .cat-owner__icon {
+    right: 16px;
   }
 }

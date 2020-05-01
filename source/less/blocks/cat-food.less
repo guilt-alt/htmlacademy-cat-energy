@@ -21,6 +21,7 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
+  background-size: contain;
 }
 
 .cat-food__title {
@@ -48,6 +49,12 @@
 
   width: 280px;
   height: 270px;
+}
+
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  .cat-food__wrapper {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -114,7 +121,8 @@
     min-width: 100%;
     min-height: 696px;
 
-    background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(90deg, #68b738 100%);
+    background: linear-gradient(90deg, #68b738 100%);
+    background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: 100% 0;
     background-size: 721px 696px;
@@ -137,5 +145,11 @@
   .cat-food__button {
     margin-top: 34px;
     margin-left: 80px;
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .cat-food {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 }
