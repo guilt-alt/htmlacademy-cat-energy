@@ -86,7 +86,7 @@
     </section>
 
     <section class="example">
-      <div>
+      <div class="example__container">
         <h2 class="example__heading">Живой пример</h2>
         <p class="example__text">
           Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
@@ -108,26 +108,16 @@
         </div>
       </div>
 
-      <div class="example__image-wrapper">
-        <picture class="example__range-slider-image example__range-slider-image--after">
-          <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
-          <img width="320" class="example__range-slider-image-after" src="img/after-mobile@1x.png"
-            srcset="img/after-mobile@2x.png 2x" alt="Ваш кот до">
-        </picture>
-        <picture class="example__range-slider-image example__range-slider-image--before">
-          <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
-          <img width="320" class="example__range-slider-image-before" src="img/before-mobile@1x.png"
-            srcset="img/before-mobile@2x.png 2x" alt="Ваш кот после">
-        </picture>
+      <div class="slider">
+        <div class="slider__image-container">
+          <div class="slider__image"></div>
+        </div>
 
-        <div class="example__range-slider-wrapper">
-          <span class="example__range-text">Было</span>
-          <div class="example__range-slider">
-            <div class="example__range-slider-pin"></div>
-          </div>
-          <span class="example__range-text">Стало</span>
+        <div class="slider__range-container">
+          <span class="slider__range-text">Было</span>
+          <input class="slider__range" type="range" min="0" max="100" value="50" id="slider"
+            oninput="moveDivisor()">
+          <span class="slider__range-text">Стало</span>
         </div>
       </div>
     </section>
@@ -153,8 +143,8 @@
         <picture class="map__img-wrapper">
           <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="map__img" width="320" height="100%" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"
-            alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          <img class="map__img" width="320" height="100%" src="img/bg-map-mobile@1x.png"
+            srcset="img/bg-map-mobile@2x.png 2x" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </picture>
       </article>
     </div>
@@ -162,7 +152,7 @@
     <div class="footer__wrapper">
       <div class="footer__logo-wrapper">
         <a class="footer__logo" href="#">
-          <b class="footer__logo-bold">Cat</b> Energy
+          <img class="footer__logo-image" width="128" src="img/logo-footer.svg" alt="">
         </a>
       </div>
 
@@ -177,8 +167,8 @@
         </li>
         <li class="social__item">
           <a class="social__link social__link--insta" href="#" title="instagram">
-            <svg class="social__icon" width="16" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 16.1 16"
-              xml:space="preserve">
+            <svg class="social__icon" width="16" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+              viewBox="0 0 16.1 16" xml:space="preserve">
               <path
                 d="M11.8 1C13.6 1 15 2.4 15 4.2v7.7c0 1.7-1.4 3.1-3.1 3.1H4.2C2.4 15 1 13.6 1 11.8V4.2C1 2.4 2.4 1 4.2 1h7.6m0-1H4.2C1.9 0 0 1.9 0 4.2v7.7C0 14.1 1.9 16 4.2 16h7.7c2.3 0 4.2-1.9 4.2-4.2V4.2C16 1.9 14.1 0 11.8 0z" />
               <path
@@ -208,6 +198,14 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document.createElement("picture");
+
+  </script>
+  <script src="js/picturefill.min.js" async></script>
+
+  <script src="js/slider.js"></script>
 </body>
 
 </html>

@@ -98,7 +98,7 @@
           <label class="cat-owner__number">Телефон:*
             <input class="cat-owner__input text-field" type="text" name="tel" placeholder="8 (960) 900-60-90" required required>
 
-            <svg class="cat-owner__icon" width="20" fill="#222222" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            <svg class="cat-owner__icon" width="20" height="20px" fill="#222222" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" xml:space="preserve">
               <path
                 d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z" />
@@ -168,11 +168,11 @@
       <article class="map">
         <h2 class="visually-hidden">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</h2>
 
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+        <picture class="map__img-wrapper">
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
           <img class="map__img" width="320" height="100%" src="img/bg-map-mobile@1x.png"
-            alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            srcset="img/bg-map-mobile@2x.png 2x" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </picture>
       </article>
     </div>
@@ -180,7 +180,7 @@
     <div class="footer__wrapper">
       <div class="footer__logo-wrapper">
         <a class="footer__logo" href="#">
-          <b class="footer__logo-bold">Cat</b> Energy
+          <img class="footer__logo-image" width="128" src="img/logo-footer.svg" alt="">
         </a>
       </div>
 
@@ -227,6 +227,11 @@
     </div>
   </footer>
 
+  <script>
+    document.createElement("picture");
+
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </body>
 
 </html>
