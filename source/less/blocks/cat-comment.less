@@ -1,27 +1,30 @@
 .cat-comment {
   position: relative;
   padding: 10px 20px 17px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 22px;
-    right: 0;
-
-    width: calc(100% - 162px);
-    height: 3px;
-    background-color: #68b738;
-  }
 }
 
 .cat-comment__title {
+  position: relative;
   margin-bottom: 16px;
   padding: 0;
+
+  width: 100%;
 
   color: #111111;
   font-size: 24px;
   font-weight: 400;
   line-height: 44px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: -20px;
+
+    width: calc(100% - 122px);
+    height: 3px;
+    background-color: #68b738;
+  }
 }
 
 .cat-comment__textarea {
@@ -62,28 +65,29 @@
   .cat-comment {
     margin-top: 46px;
     padding: 56px 70px 15px;
-
-    &::before {
-      top: 22px;
-
-      width: calc(100% - 289px);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 22px;
-      left: 0;
-
-      width: 4%;
-      height: 3px;
-      background-color: #68b738;
-    }
   }
 
   .cat-comment__title {
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      top: 21px;
+      right: -70px;
+
+      width: calc(100% - 148px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 21px;
+      left: -70px;
+
+      width: 5%;
+      height: 3px;
+      background-color: #68b738;
+    }
   }
 
   .cat-comment__textarea {
@@ -100,15 +104,20 @@
 @media (min-width: @desktop-width) {
   .cat-comment {
     padding: 10px 110px 15px;
+  }
 
+  .cat-comment__title {
     &::before {
-      top: 22px;
+      top: 23px;
+      right: -110px;
 
-      width: calc(100% - 330px);
+      width: calc(100% - 108px);
     }
 
     &::after {
-      width: 5%;
+      top: 23px;
+      left: -110px;
+      width: 6%;
     }
   }
 
