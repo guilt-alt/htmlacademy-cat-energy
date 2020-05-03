@@ -7,20 +7,10 @@
   color: #222222;
   font-size: 16px;
   text-transform: uppercase;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 14px;
-    right: 0;
-
-    width: calc(100% - 221px);
-    height: 3px;
-    background-color: #68b738;
-  }
 }
 
 .cat-owner__title {
+  position: relative;
   margin-bottom: 33px;
   padding: 0;
 
@@ -32,6 +22,17 @@
   line-height: 24px;
   text-transform: none;
   white-space: pre-line;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: -20px;
+
+    width: calc(100% - 180px);
+    height: 3px;
+    background-color: #68b738;
+  }
 }
 
 .cat-owner__email,
@@ -50,10 +51,6 @@
   padding-left: 14px;
 }
 
-.cat-owner__input.text-field {
-  padding-top: 4px;
-}
-
 .cat-owner__icon {
   position: absolute;
   top: 52%;
@@ -69,29 +66,30 @@
 
     font-size: 20px;
     line-height: 20px;
-
-    &::before {
-      top: 22px;
-
-      width: calc(100% - 624px);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 22px;
-      left: 0;
-
-      width: 4%;
-      height: 3px;
-      background-color: #68b738;
-    }
   }
 
   .cat-owner__title {
     font-size: 36px;
     line-height: 36px;
     white-space: nowrap;
+
+    &::before {
+      top: 23px;
+      right: -70px;
+
+      width: calc(100% - 484px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      left: -70px;
+
+      width: 5%;
+      height: 3px;
+      background-color: #68b738;
+    }
   }
 
   .cat-owner__wrapper {
@@ -116,15 +114,18 @@
   .cat-owner {
     margin-top: 68px;
     padding: 0 110px 20px;
+  }
 
+  .cat-owner__title {
     &::before {
-      top: 22px;
+      right: -110px;
 
-      width: calc(100% - 663px);
+      width: calc(100% - 442px);
     }
 
     &::after {
-      width: 5%;
+      left: -110px;
+      width: 6%;
     }
   }
 
