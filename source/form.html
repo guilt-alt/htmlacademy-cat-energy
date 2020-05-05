@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Подбор Программы</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -85,20 +85,18 @@
 
         <div class="cat-owner__wrapper">
           <label class="cat-owner__email">E-mail:*
-            <input class="cat-owner__input text-field" type="email" name="email" placeholder="kuklachev@gmail.com"
-              required required>
+            <input class="cat-owner__input text-field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
 
             <svg class="cat-owner__icon" width="20" height="13" fill="#222222">
-              <use xlink:href="img/sprite.svg#mail"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-mail"></use>
             </svg>
           </label>
 
           <label class="cat-owner__number">Телефон:*
-            <input class="cat-owner__input text-field" type="text" name="tel" placeholder="8 (960) 900-60-90" required
-              required>
+            <input class="cat-owner__input text-field" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
 
             <svg class="cat-owner__icon" width="20" height="20px" fill="#222222">
-              <use xlink:href="img/sprite.svg#phone"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-phone"></use>
             </svg>
           </label>
         </div>
@@ -170,7 +168,7 @@
 
           <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="map__img" width="320" height="100%" src="img/bg-map-mobile@1x.png"
+          <img class="map__img" width="320" height="360" src="img/bg-map-mobile@1x.png"
             srcset="img/bg-map-mobile@2x.png 2x" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </picture>
       </article>
@@ -179,31 +177,29 @@
     <div class="footer__wrapper">
       <div class="footer__logo-wrapper">
         <a class="footer__logo" href="#">
-          <svg class="footer__logo-image" width="128">
-            <use xlink:href="img/sprite.svg#footer-logo"></use>
-          </svg>
+          <img class="footer__logo-image" width="128" src="img/logo-footer.svg" alt="Логотип Кэт Энерджи">
         </a>
       </div>
 
       <ul class="social">
         <li class="social__item">
           <a class="social__link" href="#" title="vk">
-            <svg class="social__icon" width="22" height="100%">
-              <use xlink:href="img/sprite.svg#vk"></use>
+            <svg class="social__icon" width="22" height="12">
+              <use xlink:href="img/sprite.svg#sprite-icon-vk"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--insta" href="#" title="instagram">
-            <svg class="social__icon" width="16" height="100%">
-              <use xlink:href="img/sprite.svg#insta"></use>
+            <svg class="social__icon" width="16" height="16">
+              <use xlink:href="img/sprite.svg#sprite-icon-insta"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="#" title="facebook">
-            <svg class="social__icon" width="10" height="100%">
-              <use xlink:href="img/sprite.svg#facebook"></use>
+            <svg class="social__icon" width="10" height="19">
+              <use xlink:href="img/sprite.svg#sprite-icon-fb"></use>
             </svg>
           </a>
         </li>
@@ -213,7 +209,7 @@
         <a class="copy__link" href="https://htmlacademy.ru/intensive/adaptive">
           <p class="copy__text">HTML Academy</p>
           <svg class="copy__logo-image" width="40">
-            <use xlink:href="img/sprite.svg#academy"></use>
+            <use xlink:href="img/sprite.svg#sprite-htmlacademy"></use>
           </svg>
         </a>
       </div>
