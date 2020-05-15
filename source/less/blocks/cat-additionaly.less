@@ -116,8 +116,9 @@
   .cat-additionaly__wrapper {
     margin-top: 30px;
     padding: 0;
+    padding-right: 64px;
 
-    height: 144px;
+    min-height: 144px;
 
     display: flex;
     flex-wrap: wrap;
@@ -126,13 +127,12 @@
 
   .cat-additionaly__label {
     margin-top: 18px;
-    margin-right: 96px;
     padding-left: 60px;
 
+    min-width: 220px;
     min-height: 40px;
 
     &:last-child {
-      margin-right: 134px;
       margin-bottom: 0;
     }
   }
@@ -140,7 +140,7 @@
 
 @media (min-width: @desktop-width) {
   .cat-additionaly {
-    padding: 10px 110px 14px;
+    padding: 10px 110px 6px;
   }
 
   .cat-additionaly__title {
@@ -157,10 +157,12 @@
   }
 
   .cat-additionaly__wrapper {
-    margin-top: 0;
+    margin-top: 34px;
+    margin-bottom: 56px;
+    padding: 0;
 
     max-width: 98%;
-    height: 134px;
+    min-height: 0;
 
     align-items: center;
     justify-content: space-between;
@@ -168,11 +170,12 @@
 
   .cat-additionaly__label {
     margin: 0;
-
+    margin-top: 14px;
+    margin-right: 60px;
     min-width: 220px;
 
-    &:last-child {
-      margin: 0;
+    &:nth-child(4n) {
+      margin-right: 0;
     }
   }
 }

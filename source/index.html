@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кэт Энерджи</title>
 
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -83,10 +84,18 @@
       <h2 class="how__title">Как это работает</h2>
 
       <ul class="how__list">
-        <li class="how__item">Функциональное питание содержит только полезные питательные вещества.</li>
-        <li class="how__item">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-        <li class="how__item">Замените один-два приема обычной еды на наше функциональное питание.</li>
-        <li class="how__item">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</li>
+        <li class="how__item">
+          <p class="how__text">Функциональное питание содержит только полезные питательные вещества.</p>
+        </li>
+        <li class="how__item">
+          <p class="how__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+        </li>
+        <li class="how__item">
+          <p class="how__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
+        </li>
+        <li class="how__item">
+          <p class="how__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</p>
+        </li>
       </ul>
     </section>
 
@@ -115,12 +124,15 @@
 
       <div class="slider">
         <div class="slider__image-container">
-          <div class="slider__image"></div>
+          <div class="slider__image">
+          </div>
         </div>
 
         <div class="slider__range-container">
           <span class="slider__range-text">Было</span>
-          <input class="slider__range" type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+          <label for="slider" class="visually-hidden">Ползунок для примера до и после</label>
+          <input class="slider__range" type="range" min="0" max="100" value="0" id="slider" oninput="moveDivisor()"
+            onchange="moveDivisor()">
           <span class="slider__range-text">Стало</span>
         </div>
       </div>
@@ -135,34 +147,45 @@
           к сотрудничеству<br>
           дилеров!
         </p>
-        <address class="collab__address">ул. Большая
-          Конюшенная, д. 19/8
-
-          Санкт-Петербург
+        <address class="collab__address">ул. Большая Конюшенная, д. 19/8
+          <span>Санкт-Петербург</span>
         </address>
       </div>
 
       <article class="map">
         <h2 class="visually-hidden">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</h2>
-        <picture class="map__img-wrapper">
-          <source type="image/webp" media="(min-width: 1440px)"
-            srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="map__img" width="320" height="360" src="img/bg-map-mobile@1x.png"
-            srcset="img/bg-map-mobile@2x.png 2x" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-        </picture>
+        <noscript class="map__img-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+
+
+            <img class="map__img" width="320" height="360" src="img/bg-map-mobile@1x.png"
+              srcset="img/bg-map-mobile@2x.png 2x" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          </picture>
+        </noscript>
+
+        <iframe class="map__iframe b-lazy"
+          data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A97129e3d5e68bca66cbcc82561c1106c7ef7ce60061e78b342d8c82772ac6baf&amp;source=constructor">
+        </iframe>
       </article>
     </div>
-
     <div class="footer__wrapper">
       <div class="footer__logo-wrapper">
         <a class="footer__logo" href="#">
-          <img class="footer__logo-image" width="128" src="img/logo-footer.svg" alt="Логотип Кэт Энерджи">
+          <img class="footer__logo-image b-lazy" width="128"
+            src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+            data-src="img/logo-footer.svg" alt="Логотип Кэт Энерджи">
+          <noscript>
+            <img class="footer__logo-image" width="128" src="img/logo-footer.svg" alt="Логотип Кэт Энерджи">
+          </noscript>
         </a>
       </div>
 
@@ -200,18 +223,15 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    document.createElement("picture");
-
-  </script>
-  <script src="js/picturefill.min.js" async></script>
-
-  <script src="js/slider.min.js"></script>
-
   <script src="js/svg4everybody.min.js"></script>
   <script>
     svg4everybody();
+
+  </script>
+
+  <script src="js/script.min.js"></script>
+  <script>
+    document.createElement("picture");
 
   </script>
 </body>
