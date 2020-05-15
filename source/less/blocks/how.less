@@ -18,6 +18,10 @@
   list-style: none;
 }
 
+.how__text {
+  margin: 0;
+}
+
 .how__item {
   position: relative;
   margin-top: 20px;
@@ -85,13 +89,13 @@
 @media (min-width: @tablet-width) {
   .how {
     position: relative;
-    padding: 26px 30px 50px;
+    padding: 26px 30px 52px;
 
     border-bottom: 1px solid #e6e6e6;
   }
 
   .how__title {
-    margin-bottom: 66px;
+    margin-bottom: 64px;
 
     font-size: 60px;
     line-height: 76px;
@@ -103,28 +107,31 @@
 
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
     justify-content: space-between;
+  }
+
+  .how__text {
+    padding-top: 32px;
+    padding-bottom: 40px;
+
+    max-width: 246px;
   }
 
   .how__item {
     margin: 0;
     margin-right: 86px;
-    margin-bottom: 82px;
+    margin-bottom: 88px;
 
     max-width: 236px;
-    height: 228px;
+    min-height: 228px;
 
     font-size: 16px;
     line-height: 24px;
 
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
+    align-items: flex-start;
+    flex-direction: column;
 
     &::before {
-      margin-bottom: -16px;
-
       width: 80px;
       height: 80px;
     }
@@ -166,7 +173,7 @@
     &:last-child {
       margin-right: 80px;
       margin-bottom: 0;
-      max-width: 246px;
+      min-width: 246px;
     }
 
     &:last-child::after {
@@ -179,14 +186,14 @@
 
 @media (min-width: @desktop-width) {
   .how {
-    padding: 36px 110px 10px;
+    padding: 36px 110px 18px;
     min-height: 357px;
 
     border: none;
   }
 
   .how__title {
-    margin-bottom: 65px;
+    margin-bottom: 45px;
   }
 
   .how__list {
@@ -197,10 +204,11 @@
   }
 
   .how__item {
-    margin-right: 0;
+    margin-top: 18px;
+    margin-right: 60px;
     margin-bottom: 0;
 
-    &:last-child {
+    &:nth-child(4n) {
       margin-right: 0;
     }
   }

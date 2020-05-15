@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Подбор Программы</title>
 
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -45,20 +46,20 @@
       программу питания для вашего кота
     </p>
 
-    <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+    <form class="form" id="form" action="https://echo.htmlacademy.ru" method="POST">
 
       <div class="form__cat-bio-wrapper">
         <fieldset class="cat-bio">
           <label class="cat-bio__label">Имя:*
-            <input class="cat-bio__input text-field" type="text" name="name" placeholder="Барсик" required>
+            <input class="cat-bio__input text-field text-field--valid" type="text" name="name" placeholder="Барсик">
           </label>
 
           <label class="cat-bio__label">Вес (кг):*
-            <input class="cat-bio__input text-field" type="number" name="weight" placeholder="7" required>
+            <input class="cat-bio__input text-field text-field--valid" type="number" name="weight" min="1" placeholder="7">
           </label>
 
           <label class="cat-bio__label">Возраст&nbsp;(лет):
-            <input class="cat-bio__input text-field" type="number" name="age" placeholder="7">
+            <input class="cat-bio__input text-field" type="number" name="age" min="0" placeholder="7">
           </label>
         </fieldset>
 
@@ -84,16 +85,17 @@
           (владельца кота)</legend>
 
         <div class="cat-owner__wrapper">
-          <label class="cat-owner__email">E-mail:*
-            <input class="cat-owner__input text-field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+          <label class="cat-owner__label cat-owner__label--email">E-mail:*
+            <input class="cat-owner__input text-field text-field--valid" type="email" name="email"
+              placeholder="kuklachev@gmail.com">
 
             <svg class="cat-owner__icon" width="20" height="13" fill="#222222">
               <use xlink:href="img/sprite.svg#sprite-icon-mail"></use>
             </svg>
           </label>
 
-          <label class="cat-owner__number">Телефон:*
-            <input class="cat-owner__input text-field" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+          <label class="cat-owner__label cat-owner__label--number">Телефон:*
+            <input class="cat-owner__input text-field text-field--valid" type="tel" name="phone" placeholder="8 (960) 900-60-90">
 
             <svg class="cat-owner__icon" width="20" height="20px" fill="#222222">
               <use xlink:href="img/sprite.svg#sprite-icon-phone"></use>
@@ -149,35 +151,46 @@
           к сотрудничеству<br>
           дилеров!
         </p>
-        <address class="collab__address">ул. Большая
-          Конюшенная, д. 19/8
-
-          Санкт-Петербург
+        <address class="collab__address">ул. Большая Конюшенная, д. 19/8
+          <span>Санкт-Петербург</span>
         </address>
       </div>
 
       <article class="map">
         <h2 class="visually-hidden">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</h2>
 
-        <picture class="map__img-wrapper">
-          <source type="image/webp" media="(min-width: 1440px)"
-            srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+        <noscript class="map__img-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="map__img" width="320" height="360" src="img/bg-map-mobile@1x.png"
-            srcset="img/bg-map-mobile@2x.png 2x" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-        </picture>
+            <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+
+
+            <img class="map__img" width="320" height="360" src="img/bg-map-mobile@1x.png"
+              srcset="img/bg-map-mobile@2x.png 2x" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          </picture>
+        </noscript>
+
+        <iframe class="map__iframe b-lazy"
+          data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A97129e3d5e68bca66cbcc82561c1106c7ef7ce60061e78b342d8c82772ac6baf&amp;source=constructor">
+        </iframe>
       </article>
     </div>
 
     <div class="footer__wrapper">
       <div class="footer__logo-wrapper">
         <a class="footer__logo" href="#">
-          <img class="footer__logo-image" width="128" src="img/logo-footer.svg" alt="Логотип Кэт Энерджи">
+          <img class="footer__logo-image b-lazy" width="128"
+            src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+            data-src="img/logo-footer.svg" alt="Логотип Кэт Энерджи">
+          <noscript>
+            <img class="footer__logo-image" width="128" src="img/logo-footer.svg" alt="Логотип Кэт Энерджи">
+          </noscript>
         </a>
       </div>
 
@@ -215,12 +228,16 @@
       </div>
     </div>
   </footer>
-
-  <script src="js/picturefill.min.js" async></script>
-
   <script src="js/svg4everybody.min.js"></script>
   <script>
     svg4everybody();
+
+  </script>
+
+  <script src="js/script.min.js"></script>
+  <script>
+    document.createElement("picture");
+
   </script>
 </body>
 

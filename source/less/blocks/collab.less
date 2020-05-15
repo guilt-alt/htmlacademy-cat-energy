@@ -35,7 +35,7 @@
 
 @media (min-width: @tablet-width) {
   .collab {
-    padding: 66px 72px 54px;
+    padding: 66px 72px 52px;
     align-items: flex-start;
   }
 
@@ -45,12 +45,17 @@
   }
 
   .collab__address {
-    max-width: 200px;
+    width: 190px;
+    max-width: 190px;
+    height: 80px;
 
     text-align: right;
     font-size: 16px;
     line-height: 20px;
-    white-space: pre-line;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -61,7 +66,7 @@
     left: 110px;
     transform: translateY(-52%);
 
-    padding: 64px 90px 59px 76px;
+    padding: 64px 64px 59px 76px;
 
     width: 570px;
     height: 201px;
@@ -69,8 +74,9 @@
     background-color: #ffffff;
 
     align-items: center;
+    justify-content: space-between;
 
-    z-index: 1;
+    z-index: 3;
   }
 
   .collab__address {

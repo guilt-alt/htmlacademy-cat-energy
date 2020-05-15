@@ -56,6 +56,10 @@
   align-items: center;
 }
 
+.example__stats-mass .example__stats-text {
+  min-width: 0;
+}
+
 .example__stats-text {
   position: absolute;
   top: 34px;
@@ -108,6 +112,7 @@
   .example__text {
     margin-top: 64px;
     padding: 0 30px;
+    padding-right: 40px;
 
     font-size: 16px;
     line-height: 24px;
@@ -144,9 +149,12 @@
     background-color: #ffffff;
   }
 
-  .example__stats-days,
-  .example__stats-text {
+  .example__stats-days .example__stats-text {
     min-width: 140px;
+  }
+
+  .example__stats-mass .example__stats-text {
+    min-width: 110px;
   }
 
   .example__stats-expenses {
@@ -155,10 +163,14 @@
     font-size: 20px;
     line-height: 20px;
     text-align: right;
-    white-space: pre;
 
-    min-width: 0;
+    min-width: 300px;
+    min-height: 50px;
     flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -206,11 +218,13 @@
     margin-top: 60px;
 
     min-width: 326px;
+    min-height: 0;
 
     white-space: normal;
     flex-grow: 0;
 
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 }
