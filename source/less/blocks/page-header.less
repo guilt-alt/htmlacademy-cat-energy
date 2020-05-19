@@ -41,14 +41,20 @@
   font-size: 0;
 
   background-color: #ffffff;
-  background-image: url("../img/icon-close.svg");
+  background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: contain;
+
+  display: none;
+}
+
+.page-header__toggle--active {
+  display: block;
 }
 
 .page-header__toggle--close {
-  background-image: url("../img/icon-mobile-menu.svg");
+  background-image: url("../img/icon-close.svg");
 }
 
 @media (min-width: @tablet-width) {
@@ -76,9 +82,12 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    padding: 53px 110px 54px;
+    padding: 53px 7.6% 54px;
 
     min-width: 100%;
+
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .page-header--position {

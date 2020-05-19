@@ -4,13 +4,13 @@ var button = document.querySelector(".page-header__toggle");
 var divisor = document.querySelector(".slider__image");
 
 if (window.matchMedia("(max-width: 767px)").matches) {
-  button.classList.add("page-header__toggle--close");
-  menu.classList.add("main-nav--close");
+  button.classList.add("page-header__toggle--active");
+  menu.classList.add("main-nav--active");
 
   button.addEventListener("click", function (e) {
     e.preventDefault();
     button.classList.toggle("page-header__toggle--close");
-    menu.classList.toggle("main-nav--close");
+    menu.classList.toggle("main-nav--active");
   });
 }
 
@@ -39,7 +39,7 @@ if (document.getElementById("form")) {
       };
     };
   });
-}
+};
 
 //!Map
 if (window.matchMedia("(min-width: 1400px)").matches) {
